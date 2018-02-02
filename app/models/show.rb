@@ -9,4 +9,7 @@ class Show < ActiveRecord::Base
     # binding.pry
     self.find_by(:rating => x)
   end
+
+  def self.lowest_rating
+    self.minimum(:rating)
 end
