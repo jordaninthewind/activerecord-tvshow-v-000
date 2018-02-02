@@ -7,6 +7,6 @@ class Show < ActiveRecord::Base
   def self.most_popular_show
     x = self.highest_rating
     # binding.pry
-    self.find_by :rating highest_rating
+    self.find_by(:rating => x)
   end
 end
